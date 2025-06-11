@@ -2,7 +2,7 @@
 
 A React + Vite application that helps content creators plan, schedule, and track their content across multiple platforms.
 
-Live Demo [https://content-creator-toolkit.netlify.app](https://content-creator-toolkit.netlify.app)
+[Live Demo](https://content-creator-toolkit.netlify.app)
 
 ---
 
@@ -47,27 +47,27 @@ git clone https://github.com/smithrw1986/content-creator-toolkit.git
 cd content-creator-toolkit
 ```
 
-```bash
 2. Install dependencies:
 
+```bash
 npm install
 ```
 
-```bash
 3. Run the development server:
 
+```bash
 npm run dev
 ```
 
-```bash
 4. Build for production:
 
+```bash
 npm run build
 ```
 
 ## Author
 
-Ryan Smith — [smithrw1986 on GitHub](https://github.com/smithrw1986)
+Ryan Smith: [smithrw1986 on GitHub](https://github.com/smithrw1986)
 
 ## License
 
