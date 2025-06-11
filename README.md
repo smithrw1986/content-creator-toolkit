@@ -25,6 +25,18 @@ LocalStorage support for content ideas, calendar events, and engagement logs.
 
 ---
 
+## Screenshots
+
+![Content Ideas](./assets/Ideas.png)
+
+![Calendar](./assets/Calendar.png)
+
+![Calendar with Pop-up](./assets/Calendar_Pop-up.png)
+
+![Engagement Tracker](./assets/Engagement.png)
+
+---
+
 ## Tech Stack
 
 - React
@@ -65,9 +77,13 @@ npm run dev
 npm run build
 ```
 
+---
+
 ## Author
 
 Ryan Smith: [smithrw1986 on GitHub](https://github.com/smithrw1986)
+
+---
 
 ## License
 
