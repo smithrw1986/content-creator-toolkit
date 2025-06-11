@@ -1,0 +1,387 @@
+:root {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.2;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #f9f9f9;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  min-width: 80px;
+}
+
+button.active {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transform: scale(0.98);
+}
+
+button:hover {
+  border-color: #646cff;
+  opacity: 0.9;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.App {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  color: #333;
+}
+
+textarea {
+  resize: vertical;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.react-calendar {
+  width: 100% !important;
+  max-width: 100% !important;
+  background: #fff;
+  border: none;
+  font-family: inherit;
+  line-height: normal;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.react-calendar__tile {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch;
+  justify-content: flex-start;
+  max-width: initial !important;
+  padding: 0.75rem 0.5rem !important;
+  background: none !important;
+  color: #333 !important;
+  height: 80px !important; /* NEW LINE → fix the height */
+  box-sizing: border-box; /* ensure padding works cleanly */
+}
+
+.react-calendar__tile--active {
+  background: #007bff !important;
+  color: #fff !important;
+}
+
+.react-calendar__tile--now {
+  background: #29cdff !important; /* dark gray */
+  color: #fff !important; /* white text */
+  border-radius: 8px; /* match your other tiles if desired */
+}
+
+.react-calendar__tile--now.react-calendar__tile--active {
+  background: #007bff !important; /* your royal blue */
+  color: #fff !important;
+}
+
+.react-calendar__navigation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.react-calendar__navigation__arrow {
+  all: unset;
+  font-family: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  color: #333;
+}
+
+.react-calendar__navigation__label {
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #1a3d7c; /* subtle dark blue */
+  background-color: #e8f0ff; /* very light blue */
+  border-radius: 8px; /* soft corners */
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.react-calendar {
+  border-radius: 8px; /* or 6px to match your other elements */
+  overflow: hidden; /* this is important → clips the inner corners */
+  border: 1px solid #ddd; /* optional: keeps clean border */
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.react-calendar__tile--active .scheduled-content {
+  color: #fff !important; /* white text on blue background */
+}
+
+.react-calendar__tile .scheduled-content {
+  color: #007bff; /* blue text normally */
+}
+
+.react-calendar__tile .scheduled-content-item {
+  color: #007bff !important; /* normal */
+  font-size: 0.6rem;
+}
+
+.react-calendar__tile--active .scheduled-content-item {
+  color: #fff !important; /* selected = white */
+}
+
+.react-calendar__tile .scheduled-content-container {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #ccc transparent; /* Firefox */
+
+  /* Webkit browsers */
+  -webkit-overflow-scrolling: touch;
+}
+
+.react-calendar__tile .scheduled-content-container::-webkit-scrollbar {
+  width: 4px; /* very thin */
+}
+
+.react-calendar__tile .scheduled-content-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.react-calendar__tile .scheduled-content-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 2px;
+  border: none;
+}
+
+/* Optional: add padding inside each item instead */
+.react-calendar__tile .scheduled-content-item {
+  color: #007bff !important;
+  font-size: 0.6rem;
+  padding: 0 12px; /* padding inside item, not container */
+}
+
+.react-calendar__tile--active .scheduled-content-item {
+  color: #fff !important;
+}
+
+.modal-drag-handle {
+  cursor: move;
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 28px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.resize-corner-indicator {
+  position: absolute;
+  rotate: 90deg;
+  width: 16px;
+  height: 16px;
+  right: -8px;
+  bottom: -9px;
+  border-radius: 6px;
+  background: repeating-linear-gradient(
+    45deg,
+    #ccc,
+    #ccc 1px,
+    transparent 2px,
+    transparent 3px
+  );
+  background-size: contain;
+  cursor: se-resize;
+  z-index: 1001;
+  pointer-events: none;
+}
+
+.scheduled-content-edit-input {
+  width: 99%;
+}
+
+.schedule-existing-idea-select {
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23666' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.5rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.4);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.youtube-logs-outer {
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  padding: 0; /* No padding here */
+  background-color: #fff;
+  overflow: hidden; /* Clip inner content, but NOT the border */
+}
+
+.youtube-logs-scroll {
+  max-height: 255px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1rem; /* Padding for content inside */
+  box-sizing: border-box;
+  scrollbar-gutter: stable both-edges;
+}
+
+/* Then customize the scrollbar for Webkit browsers */
+.youtube-logs-scroll::-webkit-scrollbar {
+  width: 8px; /* Or whatever you want */
+}
+
+.youtube-logs-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px; /* This ensures track fits inside */
+}
+
+.youtube-logs-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px; /* This ensures thumb fits inside */
+}
+
+.youtube-logs-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
