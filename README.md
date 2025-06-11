@@ -2,7 +2,7 @@
 
 A simple, useful web application to help content creators manage content ideas, publishing schedules, and engagement metrics.
 
-Built with React. Designed to be fast, clean, and user-friendly.
+Built with React.
 
 ## Features
 
@@ -16,7 +16,7 @@ Built with React. Designed to be fast, clean, and user-friendly.
 
 - React
 - JavaScript (ES6+)
-- HTML5 & CSS3 (optionally TailwindCSS)
+- HTML5 & CSS3
 - LocalStorage for persistence
 
 ## Future Improvements
@@ -28,11 +28,7 @@ Built with React. Designed to be fast, clean, and user-friendly.
 
 ## Live Demo
 
-_TODO: Add your Netlify link here after deploying_
-
 ## Screenshots
-
-_TODO: Add screenshots after v1 is ready_
 
 ## License
 

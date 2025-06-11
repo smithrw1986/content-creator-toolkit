@@ -75,7 +75,7 @@ function ContentIdeaList({ ideas, deleteIdea, onDragEnd, setIdeas }) {
                           boxSizing: "border-box",
                         }}
                       >
-                        {/* Left side → content */}
+                        {/* Left side */}
                         <div
                           style={{
                             flex: "1 1 0",
@@ -129,7 +129,7 @@ function ContentIdeaList({ ideas, deleteIdea, onDragEnd, setIdeas }) {
                           )}
                         </div>
 
-                        {/* Right side → buttons */}
+                        {/* Right side */}
                         <div
                           style={{
                             display: "flex",

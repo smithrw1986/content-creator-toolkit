@@ -72,7 +72,7 @@ function App() {
         )}
         {activeTab === "calendar" && (
           <CalendarView
-            ideas={ideas} // NEW
+            ideas={ideas}
             scheduledContent={scheduledContent}
             setScheduledContent={setScheduledContent}
           />

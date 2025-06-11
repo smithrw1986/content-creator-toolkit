@@ -162,8 +162,8 @@ select:focus {
   padding: 0.75rem 0.5rem !important;
   background: none !important;
   color: #333 !important;
-  height: 80px !important; /* NEW LINE → fix the height */
-  box-sizing: border-box; /* ensure padding works cleanly */
+  height: 80px !important;
+  box-sizing: border-box;
 }
 
 .react-calendar__tile--active {
@@ -172,13 +172,13 @@ select:focus {
 }
 
 .react-calendar__tile--now {
-  background: #29cdff !important; /* dark gray */
-  color: #fff !important; /* white text */
-  border-radius: 8px; /* match your other tiles if desired */
+  background: #29cdff !important;
+  color: #fff !important;
+  border-radius: 8px;
 }
 
 .react-calendar__tile--now.react-calendar__tile--active {
-  background: #007bff !important; /* your royal blue */
+  background: #007bff !important;
   color: #fff !important;
 }
 
@@ -213,17 +213,17 @@ select:focus {
   padding: 0.5rem 1.25rem;
   cursor: pointer;
   white-space: nowrap;
-  color: #1a3d7c; /* subtle dark blue */
-  background-color: #e8f0ff; /* very light blue */
-  border-radius: 8px; /* soft corners */
+  color: #1a3d7c;
+  background-color: #e8f0ff;
+  border-radius: 8px;
   border: 1px solid #ccc;
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .react-calendar {
-  border-radius: 8px; /* or 6px to match your other elements */
-  overflow: hidden; /* this is important → clips the inner corners */
-  border: 1px solid #ddd; /* optional: keeps clean border */
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
 }
 
 .react-calendar__month-view__weekdays__weekday abbr {
@@ -232,20 +232,20 @@ select:focus {
 }
 
 .react-calendar__tile--active .scheduled-content {
-  color: #fff !important; /* white text on blue background */
+  color: #fff !important;
 }
 
 .react-calendar__tile .scheduled-content {
-  color: #007bff; /* blue text normally */
+  color: #007bff;
 }
 
 .react-calendar__tile .scheduled-content-item {
-  color: #007bff !important; /* normal */
+  color: #007bff !important;
   font-size: 0.6rem;
 }
 
 .react-calendar__tile--active .scheduled-content-item {
-  color: #fff !important; /* selected = white */
+  color: #fff !important;
 }
 
 .react-calendar__tile .scheduled-content-container {
@@ -257,7 +257,7 @@ select:focus {
 }
 
 .react-calendar__tile .scheduled-content-container::-webkit-scrollbar {
-  width: 4px; /* very thin */
+  width: 4px;
 }
 
 .react-calendar__tile .scheduled-content-container::-webkit-scrollbar-track {
@@ -270,11 +270,10 @@ select:focus {
   border: none;
 }
 
-/* Optional: add padding inside each item instead */
 .react-calendar__tile .scheduled-content-item {
   color: #007bff !important;
   font-size: 0.6rem;
-  padding: 0 12px; /* padding inside item, not container */
+  padding: 0 12px;
 }
 
 .react-calendar__tile--active .scheduled-content-item {
@@ -353,33 +352,32 @@ select:focus {
 .youtube-logs-outer {
   border: 1px solid #aaa;
   border-radius: 10px;
-  padding: 0; /* No padding here */
+  padding: 0;
   background-color: #fff;
-  overflow: hidden; /* Clip inner content, but NOT the border */
+  overflow: hidden;
 }
 
 .youtube-logs-scroll {
   max-height: 255px;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 1rem; /* Padding for content inside */
+  padding: 1rem;
   box-sizing: border-box;
   scrollbar-gutter: stable both-edges;
 }
 
-/* Then customize the scrollbar for Webkit browsers */
 .youtube-logs-scroll::-webkit-scrollbar {
-  width: 8px; /* Or whatever you want */
+  width: 8px;
 }
 
 .youtube-logs-scroll::-webkit-scrollbar-track {
   background: #f1f1f1;
-  border-radius: 10px; /* This ensures track fits inside */
+  border-radius: 10px;
 }
 
 .youtube-logs-scroll::-webkit-scrollbar-thumb {
   background: #888;
-  border-radius: 10px; /* This ensures thumb fits inside */
+  border-radius: 10px;
 }
 
 .youtube-logs-scroll::-webkit-scrollbar-thumb:hover {

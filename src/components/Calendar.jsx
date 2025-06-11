@@ -75,7 +75,7 @@ function CalendarView({ ideas, scheduledContent, setScheduledContent }) {
           if (contentArray.length > 0) {
             setModalDate(value); // open modal only if content exists
           } else {
-            setModalDate(null); // do not open modal for empty dates
+            setModalDate(null);
           }
         }}
         value={selectedDate}
@@ -94,7 +94,7 @@ function CalendarView({ ideas, scheduledContent, setScheduledContent }) {
                   padding: "0 2px",
                   whiteSpace: "normal",
                   overflowY: "auto",
-                  maxHeight: "100px", // adjust height as desired
+                  maxHeight: "100px",
                 }}
               >
                 {contentArray.map((item, index) => (
@@ -282,10 +282,10 @@ function CalendarView({ ideas, scheduledContent, setScheduledContent }) {
                 }),
                 menu: (provided) => ({
                   ...provided,
-                  borderRadius: "12px", // already good
-                  border: "1px solid #aaa", // already good
-                  boxShadow: "0 4px 8px rgba(0,0,0,0.2)", // already good
-                  overflow: "hidden", // <-- THIS fixes the "bleed out"
+                  borderRadius: "12px",
+                  border: "1px solid #aaa",
+                  boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+                  overflow: "hidden",
                 }),
                 option: (provided, state) => ({
                   ...provided,
